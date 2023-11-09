@@ -22,3 +22,7 @@ Route::get('/home', function () {
 Route::get('/homeuser2', function () {
     echo "anda sudah login dari table user2";
 })->middleware('auth:web2');
+
+Route::get('/cache', 'App\Http\Controllers\CacheController@index');
+Route::get('/set_cache/{cache?}', 'App\Http\Controllers\CacheController@set_cache');
+Route::get('/delete_cache', 'App\Http\Controllers\CacheController@delete_cache');
