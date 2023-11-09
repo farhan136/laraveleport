@@ -16,4 +16,11 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function test_the_get_data_returns_a_successful_response(): void
+    {
+        $response = $this->post('/data/get_grafic');
+
+        $response->assertStatus(200);
+    }
 }
